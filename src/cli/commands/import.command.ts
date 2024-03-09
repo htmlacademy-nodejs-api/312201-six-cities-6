@@ -32,7 +32,7 @@ export class ImportCommand implements Command {
     this.logger = new ConsoleLogger();
     this.config = new RestConfig(this.logger);
     this.userService = new BaseUserService(this.logger, UserModel);
-    this.offerService = new BaseOfferService(this.logger, OfferModel);
+    this.offerService = new BaseOfferService(this.logger, OfferModel, UserModel);
     this.commentService = new BaseCommentService(this.logger, CommentModel);
     this.databaseClient = new MongoDatabaseClient(this.logger);
   }
